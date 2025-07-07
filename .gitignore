@@ -1,12 +1,16 @@
-# .streamlit/.gitignore
-# Ignore sensitive files in the .streamlit directory
+# German Language Analyzer - .gitignore
+# Ignore sensitive and large files
+
+# Vocabulary files (may contain proprietary data)
+vocabulary/
+*.csv
 
 # NEVER commit these files containing secrets
-secrets.toml
-credentials.toml
+.streamlit/secrets.toml
+.streamlit/credentials.toml
 
 # Local configuration overrides
-config.local.toml
+.streamlit/config.local.toml
 *.local.toml
 
 # Cache and temporary files
@@ -35,12 +39,20 @@ desktop.ini
 *.log
 logs/
 
+# Virtual environment
+venv/
+env/
+.env
+
+# Output files
+output/
+
 # Environment-specific configs
 config.development.toml
 config.production.toml
 config.staging.toml
 
 # Keep the templates
-!secrets.toml.template
-!credentials.toml.template
-!config.toml
+!.streamlit/secrets.toml.template
+!.streamlit/credentials.toml.template
+!.streamlit/config.toml
