@@ -1,0 +1,46 @@
+# .streamlit/.gitignore
+# Ignore sensitive files in the .streamlit directory
+
+# NEVER commit these files containing secrets
+secrets.toml
+credentials.toml
+
+# Local configuration overrides
+config.local.toml
+*.local.toml
+
+# Cache and temporary files
+cache/
+temp/
+*.tmp
+*.cache
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Log files
+*.log
+logs/
+
+# Environment-specific configs
+config.development.toml
+config.production.toml
+config.staging.toml
+
+# Keep the templates
+!secrets.toml.template
+!credentials.toml.template
+!config.toml

@@ -1,0 +1,75 @@
+# Configuration file for German Language Analyzer
+
+[theme]
+# Modern theme settings optimized for readability
+primaryColor = "#0066CC"              # German blue for primary actions
+backgroundColor = "#FFFFFF"           # White background for clarity
+secondaryBackgroundColor = "#F5F5F5"  # Light gray for sections
+textColor = "#262730"                 # Dark text for readability
+font = "sans serif"                   # Clean, readable font
+
+[server]
+# Server configuration
+headless = true                       # Required for Streamlit Cloud
+port = 8501                          # Default port
+address = "0.0.0.0"                  # Listen on all interfaces
+enableCORS = false                   # Security setting
+enableXsrfProtection = true          # Security setting
+enableWebsocketCompression = true    # Performance optimization
+
+# File upload limits (in MB)
+maxUploadSize = 50                   # Allow larger vocabulary files
+maxMessageSize = 50                  # Match upload size
+
+# Session configuration
+runOnSave = true                     # Auto-reload on file changes (development)
+allowRunOnSave = true                # Enable run on save
+
+[runner]
+# Performance settings
+magicEnabled = true                  # Enable magic commands
+installTracer = false                # Disable tracer for performance
+fixMatplotlib = true                 # Fix matplotlib issues
+fastReruns = true                    # Enable fast reruns
+enforceSerializableSessionState = true # Ensure session state is serializable
+
+[browser]
+# Browser settings
+gatherUsageStats = false             # Privacy setting
+serverAddress = "localhost"          # Default address for development
+serverPort = 8501                    # Default port
+
+[client]
+# Client settings
+caching = true                       # Enable caching for performance
+displayEnabled = true                # Display enabled
+showErrorDetails = true              # Show detailed errors
+toolbarMode = "auto"                 # Auto-hide toolbar
+
+# Sidebar settings
+showSidebarNavigation = true         # Show navigation in sidebar
+sidebarInitiallyCollapsed = false    # Keep sidebar open by default
+
+[ui]
+# UI customization
+hideTopBar = false                   # Show top bar
+hideSidebarNav = false              # Show sidebar navigation
+
+[deprecation]
+# Deprecation warnings
+showfileUploaderEncoding = false     # Hide encoding warnings (not relevant for our use)
+showPyplotGlobalUse = false         # Hide pyplot warnings if not using pyplot
+
+[logger]
+# Logging configuration
+level = "info"                       # Set to "debug" for troubleshooting
+messageFormat = "%(asctime)s %(levelname)s: %(message)s"
+enableRich = false                   # Disable rich logging for compatibility
+
+# German text processing specific settings
+[custom]
+# Custom settings for the German Language Analyzer
+default_language = "de"              # Default language is German
+max_text_length = 50000             # Maximum text length in characters
+enable_caching = true               # Enable result caching
+cache_ttl = 3600                    # Cache time-to-live in seconds
