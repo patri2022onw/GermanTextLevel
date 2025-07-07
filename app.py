@@ -18,7 +18,7 @@ logger = logging.getLogger(__name__)
 
 # Page configuration
 st.set_page_config(
-    page_title="German Language Analyzer",
+    page_title="Re-level German Texts",
     page_icon="🇩🇪",
     layout="wide"
 )
@@ -580,8 +580,8 @@ def get_analyzer() -> GermanLanguageAnalyzer:
 
 # Main Streamlit App
 def main():
-    st.title("🇩🇪 German Language Analyzer")
-    st.markdown("Analyze German texts based on CEFR levels (A1-C1)")
+    st.title("🇩🇪 Re-level German Texts")
+    st.markdown("Adjust German texts based on CEFR levels (A1-C1)")
     
     # Get cached analyzer
     with st.spinner("Loading vocabulary files..."):
