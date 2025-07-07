@@ -10,7 +10,7 @@ from collections import defaultdict
 import re
 import base64
 import anthropic
-import google.genai as genai
+from google import genai
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -263,7 +263,7 @@ class AIService:
             Simplified text:"""
             
             response = self.claude_client.messages.create(
-                model="claude-3-sonnet-20240229",
+                model="claude-3-5-sonnet-20240620",
                 max_tokens=1000,
                 messages=[{"role": "user", "content": prompt}]
             )
@@ -344,7 +344,7 @@ class TranslationService:
             {target_lang} translation:"""
             
             response = self.ai_service.claude_client.messages.create(
-                model="claude-3-sonnet-20240229",
+                model="claude-3-5-sonnet-20240620",
                 max_tokens=50,
                 messages=[{"role": "user", "content": prompt}]
             )
