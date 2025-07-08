@@ -1,10 +1,6 @@
 # German Language Analyzer - .gitignore
 # Ignore sensitive and large files
 
-# Vocabulary files (may contain proprietary data)
-vocabulary/
-*.csv
-
 # NEVER commit these files containing secrets
 .streamlit/secrets.toml
 .streamlit/credentials.toml
