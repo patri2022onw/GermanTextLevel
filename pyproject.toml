@@ -1,0 +1,6 @@
+[project]
+name = "Level German Texts"
+version = "1.0"
+description = "Python app with AI for re-leveling German texts according to the CEFR"
+readme = "readme.md"
+requires-python = ">=3.12"
